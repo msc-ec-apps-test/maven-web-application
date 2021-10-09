@@ -27,14 +27,14 @@ node {
          sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.0.31.52:/opt/apache-tomcat-9.0.53/webapps"
         }
     }
-/*    
+    
     stage('EmailNotification'){
-        mail bcc: 'bhanuchandra217@gmail.com', body: '''Build is Over.
+        mail bcc: 'thotibanuchandra@gmail.com', body: '''Build is Over.
 
 Regards
 Banuchandra,
-8297354748''', cc: 'bhanuchandra217@gmail.com', from: '', replyTo: '', subject: 'Build is Over.', to: 'bhanuchandra217@gmail.com'
+8297354748''', cc: 'thotibanuchandra@gmail.com', from: '', replyTo: '', subject: 'Build is Over.', to: 'thotibanuchandra@gmail.com'
         
     }
-*/    
+    
 }//closing node
