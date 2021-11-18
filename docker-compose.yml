@@ -8,4 +8,4 @@ services:
     networks:
     - flipkartbridge
 networks:
-  mavenappbridge:
+  flipkartbridge:
