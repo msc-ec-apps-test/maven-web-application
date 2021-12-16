@@ -9,8 +9,8 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Software Solution. Marathalli </h1>
-<h1 align="center">Am Thoti Banuchandra 040</h1>
+<h1 align="center">Welcome to Mithun Software Solution. Bangalore </h1>
+<h1 align="center">Am Thoti Banuchandra 217</h1>
 <h1 align="center"> Mithun Software Solutions- Very Good Training center for DevOps with AWS in Maratha Halli Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
