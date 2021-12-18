@@ -1,0 +1,27 @@
+node('node'){
+     
+    def mavenHome = tool name: "maven3.8.2"
+    stage('Checkout'){
+        
+        git branch: 'development', credentialsId: '98a2ca4f-a68a-4baf-8661-19155ac48aad', url: 'https://github.com/msc-ec-apps-test/maven-web-application.git'
+     }
+    stage('Build'){
+        
+        sh "${mavenHome}/bin/mvn clean package"
+    }
+    stage('SonarQube Report'){
+         
+        sh "${mavenHome}/bin/mvn clean sonar:sonar"
+    }
+    stage('nexusArtifactory'){
+        sh "${mavenHome}/bin/mvn clean deploy"
+    }
+    stage('Deploying to tomcat'){
+        sshagent(['972a51ed-2985-4f0e-9705-4c0d926861ee']) {
+            
+        sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.2.129.227:/opt/apache-tomcat-9.0.56/webapps"
+        }
+    }
+    
+    
+}//closing of node
